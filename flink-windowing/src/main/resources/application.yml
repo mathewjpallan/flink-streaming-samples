@@ -1,10 +1,12 @@
 jobName: flink_windowing
 jobConsumerGroupName: flink_windowing_cg_v1
 kafkaSinkBrokers: 192.168.64.26:9092
+kafkaSourceBrokers: 192.168.64.26:9092
 startingOffset: earliest
 restartCount: 10
 restartDelay: 10
 stream1:
+  source: input2
   sink: output2
   sourceParallelism: 1
   mapParallelism: 2
